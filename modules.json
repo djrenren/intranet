@@ -1,0 +1,9 @@
+{
+	"Database": {
+		"path": "./modules/db"
+	},
+	"User": {
+		"path": "./modules/user",
+		"REST": ["isLogged"]
+	}
+}

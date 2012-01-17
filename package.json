@@ -1,0 +1,12 @@
+{
+	"name": "Intranet",
+	"description": "",
+	"version": "0.0.1",
+	"author": "John Renner (and Zach Yaro)",
+	"dependencies": {
+		"mongoose"	: ">=2.4.9",
+		"jade"		: ">=0.20.0",
+		"express"	: ">=2.5.4"
+	},
+	"devDependencies": {}
+}
