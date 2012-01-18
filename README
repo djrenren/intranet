@@ -1,1 +1,9 @@
 Intranet - All the cool kids are doing it
+
+
+To set up intranet:
+- git clone the intranet repository.
+- Make sure MongoDB is installed (via your package manager).
+- Run "npm install -d" to install the dependencies (currently ejs, express, jade, and mongoose).
+- Start intranet by running intranet.sh.
+- Intranet should be running on port 3001.
