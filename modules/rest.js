@@ -12,10 +12,10 @@ var router = require('./router');
  * @param {[strings]} fns - Names of functions to be routed.
  */
 this.activateModule = function (mod, root, fns) {
-	fns.forEach(function(i){
-	  router.route('all', '/' + root + '/' + i, function (req, res) {
-      res.json(mod[i].call(this,new exports.RESTObj(req)));
-	  });
+	fns.forEach(function (i) {
+		router.route('all', '/' + root + '/' + i, function (req, res) {
+			res.json(mod[i].call(this, new exports.RESTObj(req)));
+		});
 	});
 };
 
@@ -27,5 +27,5 @@ this.activateModule = function (mod, root, fns) {
 this.RESTObj = function (req) {
 	this.session = req.session;
 	for (var i in req.body)
-	  this[i] = req.body[i];
+	this[i] = req.body[i];
 };

@@ -2,9 +2,8 @@
  * Create Routing rules
  * @module router
  */
-
-var util = require('util');
 var srv;
+
 this.init = function(server){
 	srv = server;
 };
