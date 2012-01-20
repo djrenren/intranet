@@ -2,11 +2,12 @@
 	"name": "Intranet",
 	"description": "",
 	"version": "0.0.1",
-	"author": "John Renner (and Zach Yaro)",
+	"author": "John Renner and Zachary ‘Gamer_Z.’ Yaro",
 	"dependencies": {
-		"mongoose"	: ">=2.4.9",
+		"ejs"		: ">=0.6.1",
+		"express"	: ">=2.5.4",
 		"jade"		: ">=0.20.0",
-		"express"	: ">=2.5.4"
+		"mongoose"	: ">=2.4.9"
 	},
 	"devDependencies": {}
 }
