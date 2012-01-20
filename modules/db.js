@@ -1,7 +1,10 @@
-var mongoose = require('mongoose');
-for(var i in mongoose)
-	this[i] = mongoose[i];
+/**
+ * Manage database schemas and connections
+ * @module db
+ */
 
-this.connect('mongodb://localhost:1337/intranet');
-
-
+this.connect = function(){
+  var con = require('mongoose');
+  con.connect('localhost','intranet',1337);
+  return con;
+};
