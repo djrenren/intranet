@@ -5,7 +5,7 @@
 var mongoose = require('mongoose');
 
 this.connect = function(){
-  var db = mongoose.createConnection('localhost','intranet',1337);
+  var db = mongoose.createConnection('mongodb://web:keyboardcat@ds029837.mongolab.com:29837/intranet');
   return db;
 };
 

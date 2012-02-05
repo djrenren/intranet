@@ -7,7 +7,7 @@ srv.configure(function () {
 	srv.set('view options', {
 		layout: false
 	});
-	srv.set('view engine', 'jade');
+	srv.set('view engine', 'ejs');
 	srv.use(express.bodyParser());
 	srv.use(express.methodOverride());
 	srv.use(express.cookieParser());
