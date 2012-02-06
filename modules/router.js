@@ -3,28 +3,46 @@
  * @module router
  */
 var srv;
+var pl      = require('./pageloader');
+var user    = require('./user');
 
-this.init = function(server){
+
+function RESTObj (req) {
+  this.session = req.session;
+	for (var i in req.body)
+	  this[i] = req.body[i];
+};
+
+
+this.init = function (server) {
 	srv = server;
-};
 
-/** Make a URL route
- * @param {string} method - HTTP Request type (GET or POST)
- * @param {string|regex} rule - Path rule to be routed
- * @param {function} fn - Function to be called on request
- */
-this.route = function(method, rule, fn){
-  method = method.toLowerCase();
-	if(method === 'all' || method === 'get')
-		srv.get(rule,fn);
-	if(method === 'all' || method === 'post')
-		srv.post(rule,fn);
-};
+	//Check if logged in
+	srv.get(/^.*$/, function (req, res, next) {
+    console.log(req.session);
+		if (!user.isLogged(req)) res.render('user/login.ejs', {
+			pageTitle : "Howdy!",
+			uname     : "Everyone"
+		});
+		else next();
+	});
 
-/** Make multiple routes at once
- * @param {array} routes - Multiple [method,rule,fn] routing rules
- */
-this.routeAll = function(routes){
-	for(var i in routes)
-		this.route.call(this,routes[i]);
+	//Login function
+	srv.post('/user/login', function (req, res) {
+		if (user.auth(new RESTObj(req))){
+      req.session.uid = 1; //Become Larry Page
+      res.redirect('back');
+		}
+		else res.send('Username and Password do not match');
+	});
+
+	//Sign in test
+	srv.get('/', function (req, res) {
+		user.getUser(req.session.uid, function (err, user) {
+			pl.render('user/logintest', {
+				pageTitle : "Login Test",
+				user     : user
+			}, req, res);
+		});
+	});
 };

@@ -2,16 +2,15 @@
  * Control, access, and validate User info
  *@module user
  */
-var db = require('../db');
+var db = require('./db');
 var mongoose = require('mongoose');
-var self = this;
 
 /**
  * Verify login state
  * @param {RESTObject} data - Processed req object containing the user's session
  */
 this.isLogged = function (data) {
-	return data.session.hasOwnProperty('uname');
+	return data.session.hasOwnProperty('uid');
 };
 
 /**
@@ -22,24 +21,21 @@ this.auth = function (data) {
 	if (data) return true;
 };
 
-this.getUser = function(uid){
-  return {
-    name: "Larry Page",
-    id  : uid
-  }
-}
+this.getUser = function(uid, callback){
+  db.connect().model("User").findOne({uid:uid}, callback);
+};
 
 this.init = function () {
 	exports.user = new mongoose.Schema({
-		name: String,
-		id: Number
+		uname: String,
+    fname: String,
+    lname: String,
+		uid: Number
 	});
 
   var con = db.connect();
-	con.model("User", exports.user);
+	(new (con.model("User", exports.user))({uname: 'lpage', fname: 'Larry', lname: 'Page', uid: 1})).save();
 	con.close();
-
-  require('./user.routes.js');
 
   return true;
 }();

@@ -30,11 +30,8 @@ var mods = require('./modules.json');
 util.log("Initializing modules...");
 
 require('./modules/router').init(srv);
-var REST = require('./modules/rest');
-for(var i in mods){
+for(var i in mods)
 	util.log('---'+i);
-  if(mods[i].hasOwnProperty('REST'))
-	  REST.activateModule(require(mods[i].path), i.toLowerCase(), mods[i].REST);
-}
 
 srv.listen(3001);
+console.log("listening on port 30001");
