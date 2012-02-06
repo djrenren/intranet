@@ -1,6 +1,7 @@
 #Intranet
+All the cool kids are doing it.
 
-##Set Up
+##Set Up:
   * git clone the intranet repository.
   * Make sure MongoDB is installed (via your package manager).
   * Run "npm install -d" to install the dependencies (currently ejs, express, jade, and mongoose).
