@@ -6,6 +6,26 @@ var db = require('./db');
 var mongoose = require('mongoose');
 
 /**
+ * Mongoose Schema for User collection
+ */
+this.schemaUser = new mongoose.Schema({
+	uname: String,
+	fname: String,
+	lname: String,
+	uid: Number
+});
+
+/**
+ * Authorize user from name and password
+ * @public
+ * @param {String} uname - Desired username
+ * @param {String} passwd - Password corresponding to the uname parameter
+ */
+this.auth = function (uname, passwd) {
+	if (uname && passwd) return true;
+};
+
+/**
  * Verify login state
  * @param {RESTObject} data - Processed req object containing the user's session
  */
@@ -14,28 +34,19 @@ this.isLogged = function (data) {
 };
 
 /**
- * Authorize user from name and password
- * @param {RESTObject} data - Processed req object containing uname and passwd
+ * Acquire full user info from user id
+ * @param {Number}    uid       - User id
+ * @param {Function}  callback  - Function to be called on completion
  */
-this.auth = function (data) {
-	if (data) return true;
+this.getUser = function (uid, callback) {
+	db.connect().model("User").findOne({
+		uid: uid
+	}, callback);
 };
 
-this.getUser = function(uid, callback){
-  db.connect().model("User").findOne({uid:uid}, callback);
-};
-
-this.init = function () {
-	exports.user = new mongoose.Schema({
-		uname: String,
-    fname: String,
-    lname: String,
-		uid: Number
-	});
-
-  var con = db.connect();
-	(new (con.model("User", exports.user))({uname: 'lpage', fname: 'Larry', lname: 'Page', uid: 1})).save();
+this.init = (function () {
+	var con = db.connect();
+	con.model("User", this.schemaUser);
 	con.close();
-
-  return true;
-}();
+	return true;
+}).call(this);
