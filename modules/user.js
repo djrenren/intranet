@@ -17,7 +17,6 @@ this.schemaUser = new mongoose.Schema({
 
 /**
  * Authorize user from name and password
- * @public
  * @param {String} uname - Desired username
  * @param {String} passwd - Password corresponding to the uname parameter
  */
