@@ -29,9 +29,12 @@ srv.configure('production', function () {
 var mods = require('./modules.json');
 util.log("Initializing modules...");
 
+for (var i in mods){
+  util.log('---' + i);
+  require(mods[i].path);
+}
 require('./modules/router').init(srv);
-for(var i in mods)
-	util.log('---'+i);
+
 
 srv.listen(3001);
 console.log("listening on port 30001");
