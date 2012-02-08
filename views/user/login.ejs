@@ -28,9 +28,11 @@
 			<br />
 			<br />
 			<br />
-      <% if(loginFail){ %>
-    	  User name and password do not match
-      <% } %>
+			<% if(loginFail) { %>
+				<span style="color:darkRed;">Username and password do not match</span>
+				<br />
+				<br />
+			<% } %>
 			<form method="post" action="/user/login">
 				<label for="username">Username</label>
 				<br />
