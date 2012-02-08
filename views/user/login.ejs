@@ -1,13 +1,42 @@
+<!DOCTYPE HTML>
 <html>
-  <head>
-		<title><%- pageTitle %></title>
+	<head>
+		<title><%- pageTitle %> - TJ Intranet</title>
+		
+		<!-- zoom in mobile browsers -->
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.25,user-scalable=0">
+		
+		<!-- Allows the app to run on iOS without Safari toolbars -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		
+		<link rel="apple-touch-icon-precomposed" href="/static/images/apple-touch-icon-precomposed.png" />
+		
+		<link rel="stylesheet" type="text/css" href="fire.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/default/ui.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/default/login.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/light/ui.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/light/login.css" />
 	</head>
-  <body>
-		<div>
-			Login Page for <%- uname %>
-      <form method="post" action="/user/login">
-        <button type="submit">Log in</button>
-      </form>
-    </div>
-  </body>
+	<body style="background-image:url(/static/images/backgrounds/gnome3.jpg);background-size:cover;">
+		<div id="loginPane">
+			<a id="logo" href="">Intranet</a>
+			<br />
+			<br />
+			<br />
+			<br />
+			<form method="post" action="/user/login">
+				<label for="username">Username</label>
+				<br />
+				<input type="text" name="username" id="username" class="loginField" />
+				<br />
+				<br />
+				<label for="password">Password</label>
+				<br />
+				<input type="password" name="password" id="password" class="loginField" />
+				<br />
+				<br />
+				<button type="submit">Login</button>
+			</form>
+		</div>
+	</body>
 </html>
