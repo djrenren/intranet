@@ -2,15 +2,15 @@
 <html>
 	<head>
 		<title><%- pageTitle %> - TJ Intranet</title>
-		
+
 		<!-- zoom in mobile browsers -->
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.25,user-scalable=0">
-		
+
 		<!-- Allows the app to run on iOS without Safari toolbars -->
 		<meta name="apple-mobile-web-app-capable" content="yes" />
-		
+
 		<link rel="apple-touch-icon-precomposed" href="/static/images/apple-touch-icon-precomposed.png" />
-		
+
 		<link rel="stylesheet" type="text/css" href="/static/css/fire.css" />
 		<link rel="stylesheet" type="text/css" href="/static/css/default/ui.css" />
 		<link rel="stylesheet" type="text/css" href="/static/css/default/login.css" />
@@ -24,6 +24,9 @@
 			<br />
 			<br />
 			<br />
+      <% if(loginFail){ %>
+    	  User name and password do not match
+      <% } %>
 			<form method="post" action="/user/login">
 				<label for="username">Username</label>
 				<br />

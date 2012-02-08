@@ -20,20 +20,27 @@ this.init = function (server) {
 	//Check if logged in
 	srv.get(/^\/(?!static\/).*$/, function (req, res, next) {
 	console.log(req.session);
-		if (!user.isLogged(req)) res.render('user/login.ejs', {
-			pageTitle : "Login",
-			uname     : "Everyone"
-		});
+		if (!user.isLogged(req)) {
+      res.render('user/login.ejs', {
+			  pageTitle : "Login",
+			  uname     : "Everyone",
+        loginFail : req.session.loginFail || false
+	    });
+      req.session.loginFail = false;
+		}
 		else next();
 	});
 
 	//Login function
 	srv.post('/user/login', function (req, res) {
-		if (user.auth(new RESTObj(req))) {
+		if (user.auth(req.body.uname,req.body.passwd)) {
+      if(req.session.hasOwnProperty('loginFail'))
+        delete req.session.loginFail;
 			req.session.uid = 1; //Become Larry Page
-			res.redirect('back');
 		}
-		else res.send('Username and Password do not match');
+		else
+      req.session.loginFail = true;
+    res.redirect('back');
 	});
 
 	//Sign in test
