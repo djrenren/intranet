@@ -1,0 +1,12 @@
+.newsPost {
+	border-top-style:solid;
+	border-top-width:1px;
+	border-top-color:#1F1F47;
+}
+.newsPost aside {
+	color:#808080;
+}
+
+.newsPost footer {
+	background-color:#141418;
+}

@@ -1,0 +1,14 @@
+.intrabox {
+	/*background-color:rgba(255,255,255,0.2);*/
+	border-top-style:solid;
+	border-top-width:1px;
+	border-top-color:#E0E0FF;
+}
+
+.intrabox:hover {
+	background-image:-webkit-linear-gradient(#E0E0FF, rgba(239,239,247,0) 30px);
+	background-image:   -moz-linear-gradient(#E0E0FF, rgba(239,239,247,0) 30px);
+	background-image:    -ms-linear-gradient(#E0E0FF, rgba(239,239,247,0) 30px);
+	background-image:     -o-linear-gradient(#E0E0FF, rgba(239,239,247,0) 30px);
+	background-image:        linear-gradient(#E0E0FF, rgba(239,239,247,0) 30px);
+}

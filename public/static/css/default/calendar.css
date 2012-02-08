@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.calendarWeek {
+	vertical-align:top;
+}
+.calendarWeek td {
+	width:1%;
+}
+@media (max-width:645px) {
+	.calendarWeek td, .calendarWeek th {
+		display:none;
+	}
+	.calendarWeek td#today {
+		display:table-cell;
+	}
+}

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.newsPost {
+	padding:4px 1px;
+	max-width:800px;
+}
+.newsPost header {
+	font-size:120%;
+	font-weight:bold;
+}
+.newsPost aside {
+	font-size:80%;
+}
+.newsPost footer {
+	padding:4px;
+	-webkit-border-radius:4px;
+	   -moz-border-radius:4px;
+	        border-radius:4px;
+}

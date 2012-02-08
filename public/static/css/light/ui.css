@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+body {
+	color:#020202;
+	background-color:#F0F0F0;
+}
+
+a {
+	color:#1018D0;
+}
+a:visited {
+	color:#1018D0;
+}
+a:active {
+	color:#D01010;
+	box-shadow:none;
+}
+
+button, input[type="button"], input[type="submit"], input[type="reset"], input[type="radio"], input[type="checkbox"], select:not([size]), select[size="1"] {
+	background-color:#E0E0E0;
+	background-image:-webkit-linear-gradient(#E8E8E8, #D8D8D8);
+	background-image:   -moz-linear-gradient(#E8E8E8, #D8D8D8);
+	background-image:    -ms-linear-gradient(#E8E8E8, #D8D8D8);
+	background-image:     -o-linear-gradient(#E8E8E8, #D8D8D8);
+	background-image:        linear-gradient(#E8E8E8, #D8D8D8);
+	border-style:solid;
+	border-width:1px;
+	border-color:#D3D3D3;
+	border-bottom-color:#B0B0B0;
+	
+	/*box-shadow:0px 1px 0px 0px rgba(0,0,0,0.2);*/
+	
+	text-shadow:0px 1px 0px white;
+	
+	color:#020202;
+	
+}
+input[type="radio"]:checked {
+	color:#404040;
+	text-shadow:0px 1px 0px white;
+	background-image:url(radiodot-light.png), -webkit-linear-gradient(#E8E8E8, #D8D8D8);
+	background-image:url(radiodot-light.png),    -moz-linear-gradient(#E8E8E8, #D8D8D8);
+	background-image:url(radiodot-light.png),     -ms-linear-gradient(#E8E8E8, #D8D8D8);
+	background-image:url(radiodot-light.png),      -o-linear-gradient(#E8E8E8, #D8D8D8);
+	background-image:url(radiodot-light.png),         linear-gradient(#E8E8E8, #D8D8D8);
+}
+input[type="checkbox"] {
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	width:15px;
+	height:15px;
+	position:relative;
+	top:4px;
+}
+input[type="checkbox"]:checked {
+	background-image:url(check-light.png), -webkit-linear-gradient(#E8E8E8, #D8D8D8);
+	background-image:url(check-light.png),    -moz-linear-gradient(#E8E8E8, #D8D8D8);
+	background-image:url(check-light.png),     -ms-linear-gradient(#E8E8E8, #D8D8D8);
+	background-image:url(check-light.png),      -o-linear-gradient(#E8E8E8, #D8D8D8);
+	background-image:url(check-light.png),         linear-gradient(#E8E8E8, #D8D8D8);
+	background-repeat:no-repeat;
+	background-position:1px 1px;
+}
+
+button:hover:not(:disabled), input[type=button]:hover:not(:disabled), input[type=submit]:hover:not(:disabled), input[type=reset]:hover:not(:disabled), input[type=radio]:hover:not(:disabled), input[type=checkbox]:hover:not(:disabled), select:not([size]):hover:not(:disabled), select[size="1"]:hover:not(:disabled), button:focus:not(:disabled), input[type=button]:focus:not(:disabled), input[type=submit]:focus:not(:disabled), input[type=reset]:focus:not(:disabled), input[type=radio]:focus:not(:disabled), input[type=checkbox]:focus:not(:disabled), select:not([size]):focus:not(:disabled), select[size="1"]:focus:not(:disabled) {
+	background-color:#E8E8E8;
+	/*background-image:-webkit-linear-gradient(#E9E9F0, #D8D8F0);
+	border-color:#CACAFF;*/
+	background-image:-webkit-linear-gradient(#F0F0F0, #E0E0E0);
+	background-image:   -moz-linear-gradient(#F0F0F0, #E0E0E0);
+	background-image:    -ms-linear-gradient(#F0F0F0, #E0E0E0);
+	background-image:     -o-linear-gradient(#F0F0F0, #E0E0E0);
+	background-image:        linear-gradient(#F0F0F0, #E0E0E0);
+}
+input[type="radio"]:checked:hover:not(:disabled), input[type="radio"]:checked:focus:not(:disabled) {
+	background-image:url(radiodot-light.png), -webkit-linear-gradient(#F0F0F0, #E0E0E0);
+	background-image:url(radiodot-light.png),    -moz-linear-gradient(#F0F0F0, #E0E0E0);
+	background-image:url(radiodot-light.png),     -ms-linear-gradient(#F0F0F0, #E0E0E0);
+	background-image:url(radiodot-light.png),      -o-linear-gradient(#F0F0F0, #E0E0E0);
+	background-image:url(radiodot-light.png),         linear-gradient(#F0F0F0, #E0E0E0);
+}
+input[type="checkbox"]:checked:hover:not(:disabled), input[type="checkbox"]:checked:focus:not(:disabled) {
+	background-image:url(check-light.png), -webkit-linear-gradient(#F0F0F0, #E0E0E0);
+	background-image:url(check-light.png),    -moz-linear-gradient(#F0F0F0, #E0E0E0);
+	background-image:url(check-light.png),     -ms-linear-gradient(#F0F0F0, #E0E0E0);
+	background-image:url(check-light.png),      -o-linear-gradient(#F0F0F0, #E0E0E0);
+	background-image:url(check-light.png),         linear-gradient(#F0F0F0, #E0E0E0);
+}
+
+button:active:not(:disabled), input[type=button]:active:not(:disabled), input[type=submit]:active:not(:disabled), input[type=reset]:active:not(:disabled), input[type=radio]:active:not(:disabled), input[type=checkbox]:active:not(:disabled), select:not([size]):active:not(:disabled), select[size="1"]:active:not(:disabled) {
+	background-color:#DCDCDC;
+	/*background-image:-webkit-linear-gradient(#D0D0F0, #E0E0F0);*/
+	background-image:-webkit-linear-gradient(#D6D6D6, #E0E0E0);
+	background-image:   -moz-linear-gradient(#D6D6D6, #E0E0E0);
+	background-image:    -ms-linear-gradient(#D6D6D6, #E0E0E0);
+	background-image:     -o-linear-gradient(#D6D6D6, #E0E0E0);
+	background-image:        linear-gradient(#D6D6D6, #E0E0E0);
+	-webkit-box-shadow:inset 0px 1px 4px -1px rgba(0,0,0,0.3);
+	-moz-box-shadow:inset 0px 1px 4px -1px rgba(0,0,0,0.3);
+	box-shadow:inset 0px 1px 4px -1px rgba(0,0,0,0.3);
+	border-color:rgba(0,0,0,0.2);
+	border-bottom-color:rgba(0,0,0,0.05);
+}
+input[type="radio"]:checked:active:not(:disabled) {
+	background-image:url(radiodot-light.png), -webkit-linear-gradient(#D6D6D6, #E0E0E0);
+	background-image:url(radiodot-light.png),    -moz-linear-gradient(#D6D6D6, #E0E0E0);
+	background-image:url(radiodot-light.png),     -ms-linear-gradient(#D6D6D6, #E0E0E0);
+	background-image:url(radiodot-light.png),      -o-linear-gradient(#D6D6D6, #E0E0E0);
+	background-image:url(radiodot-light.png),         linear-gradient(#D6D6D6, #E0E0E0);
+}
+input[type="checkbox"]:checked:active:not(:disabled) {
+	background-image:url(check-light.png), -webkit-linear-gradient(#D6D6D6, #E0E0E0);
+	background-image:url(check-light.png),    -moz-linear-gradient(#D6D6D6, #E0E0E0);
+	background-image:url(check-light.png),     -ms-linear-gradient(#D6D6D6, #E0E0E0);
+	background-image:url(check-light.png),      -o-linear-gradient(#D6D6D6, #E0E0E0);
+	background-image:url(check-light.png),         linear-gradient(#D6D6D6, #E0E0E0);
+}
+
+
+input:not([type]), input[type=text], input[type=email], input[type=search], input[type=password], textarea, select[size]:not([size="1"]) {
+	-webkit-appearance:none;
+	   -moz-appearance:none;
+	     -o-appearance:none;
+	        appearance:none;
+	/*background-color:#FAFAFC;
+	background-color:rgba(255,255,255,0.5);*/
+	background-color:transparent;
+	border-color:#A0A0A0;
+	border-style:solid;
+	border-width:0px;
+	border-bottom-width:1px;
+}
+textarea, select[size]:not([size="1"]) {
+	border-width:1px;
+}
+*:focus {
+	/*outline-color:rgba(0,128,256,0.5);
+	outline-style:solid;
+	outline-offset:-1px;*/
+	outline-width:0px;
+	-webkit-box-shadow:0px 0px 1px 1px rgba(0,128,255,0.5);
+	   -moz-box-shadow:0px 0px 1px 1px rgba(0,128,255,0.5);
+	        box-shadow:0px 0px 1px 1px rgba(0,128,255,0.5);
+}
+input:not([type]):focus, input[type="text"]:focus, input[type="email"]:focus, input[type="search"]:focus, input[type="password"]:focus, textarea:focus, select[size]:not([size="1"]):focus {
+	-webkit-box-shadow:none;
+	   -moz-box-shadow:none;
+	        box-shadow:none;
+	border-color:#1020FF;
+	/*border-style:solid;
+	border-width:1px;*/
+}
+
+input:disabled, button:disabled, textarea:disabled, select:disabled {
+	color:#222222;
+}

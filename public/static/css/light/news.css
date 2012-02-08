@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.newsPost {
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-bottom-color:#D0D0EF;
+}
+.newsPost aside {
+	color:#AAAAAA;
+}
+
+.newsPost footer {
+	background-color:#E6E6F0;
+}

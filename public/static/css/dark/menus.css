@@ -1,0 +1,24 @@
+.menu li a:hover, .menu li a:focus {
+	background-color:#161616;
+	background-image:-webkit-linear-gradient(left, #161616, #0A0A0A 10%);
+	background-image:   -moz-linear-gradient(left, #161616, #0A0A0A 10%);
+	background-image:    -ms-linear-gradient(left, #161616, #0A0A0A 10%);
+	background-image:     -o-linear-gradient(left, #161616, #0A0A0A 10%);
+	background-image:        linear-gradient(left, #161616, #0A0A0A 10%);
+}
+.menu li a:active {
+	background-color:#181818;
+	background-image:-webkit-linear-gradient(left, #181818, #0A0A0A 30%);
+	background-image:   -moz-linear-gradient(left, #181818, #0A0A0A 30%);
+	background-image:    -ms-linear-gradient(left, #181818, #0A0A0A 30%);
+	background-image:     -o-linear-gradient(left, #181818, #0A0A0A 30%);
+	background-image:        linear-gradient(left, #181818, #0A0A0A 30%);
+}
+.menu li.selected a {
+	background-color:#151530;
+	background-image:-webkit-linear-gradient(left, #151530, #0A0A0A 50%);
+	background-image:   -moz-linear-gradient(left, #151530, #0A0A0A 50%);
+	background-image:    -ms-linear-gradient(left, #151530, #0A0A0A 50%);
+	background-image:     -o-linear-gradient(left, #151530, #0A0A0A 50%);
+	background-image:        linear-gradient(left, #151530, #0A0A0A 50%);
+}

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+#header {
+	background-color:#F0F0F0;
+	background:-webkit-linear-gradient(#FFFFFF, #F0F0F0);
+	background:   -moz-linear-gradient(#FFFFFF, #F0F0F0);
+	background:    -ms-linear-gradient(#FFFFFF, #F0F0F0);
+	background:     -o-linear-gradient(#FFFFFF, #F0F0F0);
+	background:        linear-gradient(#FFFFFF, #F0F0F0);
+	
+	
+	box-shadow:0px 0px 8px 8px #F0F0F0;
+}
+
+#logo {
+	color:#020202;
+	background-image:url(logo.png);
+	background-repeat:no-repeat;
+}
+
+#sections a {
+	color:#5A5AA0;
+}

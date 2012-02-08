@@ -1,0 +1,6 @@
+.calendarWeek td {
+	background-color:#181818;
+}
+.calendarWeek td#today {
+	background-color:#202020;
+}

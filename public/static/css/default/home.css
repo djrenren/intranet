@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+.homeBox {
+	width:45%;
+	margin-right:8px;
+	padding:8px;
+	
+	float:left;
+	
+	border-left-style:solid;
+	border-left-width:1px;
+}
+
+@media (min-width:1200px) {
+	.homeBox {
+		margin-right:12px;
+		width:28%;
+		max-width:400px;
+	}
+}
+
+@media (max-width:645px) {
+	.homeBox {
+		width:97.5%;
+		margin:0px;
+		padding:8px 0px;
+		border-left-style:none;
+		border-left-width:0px;
+		border-top-style:solid;
+		border-top-width:1px;
+	}
+}
+
+.homeBox header {
+	display:block;
+	font-size:105%;
+	font-weight:bold;
+}
+
+.homeBox table {
+	width:100%;
+	margin-bottom:1em;
+}

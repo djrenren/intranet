@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+#loginPane {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:256px;
+	height:100%;
+	
+	padding:0px 8px;
+	
+	-webkit-transition-duration:0.2s;
+	   -moz-transition-duration:0.2s;
+	    -ms-transition-duration:0.2s;
+	     -o-transition-duration:0.2s;
+	        transition-duration:0.2s;
+}
+
+.loginField {
+	width:240px;
+}
+
+#logo {
+	/*background-size:77px 70px;*/
+	background-size:50px 55px;
+	height:55px;
+	float:left;
+	margin:6px 8px;
+	padding-top:0px;
+	padding-left:56px;
+	font-size:40px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-decoration:none;
+	
+	   -webkit-border-top-left-radius:0px;
+	      -moz-border-top-left-radius:0px;
+	           border-top-left-radius:0px;
+	  -webkit-border-top-right-radius:0px;
+	     -moz-border-top-right-radius:0px;
+	          border-top-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	   -moz-border-bottom-left-radius:0px;
+	        border-bottom-left-radius:0px;
+	
+	
+	-webkit-transition-duration:0.2s;
+	   -moz-transition-duration:0.2s;
+	    -ms-transition-duration:0.2s;
+	     -o-transition-duration:0.2s;
+	        transition-duration:0.2s;
+}
+@media (max-width:645px) {
+	#loginPane {
+		width:100%;
+		padding:0px 4px;
+	}
+	.loginField {
+		width:96%;
+	}
+	#logo {
+		padding-top:2px;
+		padding-left:32px;
+		font-size:26px;
+		background-size:30px 33px;
+		height:33px;
+	}
+}

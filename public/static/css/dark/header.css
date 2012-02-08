@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+#header {
+	background-color:#0A0A0A;
+	background:-webkit-linear-gradient(#202020, #0A0A0A);
+	background:   -moz-linear-gradient(#202020, #0A0A0A);
+	background:    -ms-linear-gradient(#202020, #0A0A0A);
+	background:     -o-linear-gradient(#202020, #0A0A0A);
+	background:        linear-gradient(#202020, #0A0A0A);
+	
+	
+	box-shadow:0px 0px 8px 8px #0A0A0A;
+}
+
+#logo {
+	color:#EAEAEA;
+	background-image:url(logo.png);
+	background-repeat:no-repeat;
+}
+
+
+#sections a {
+	color:#8A8AD0;
+}

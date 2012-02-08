@@ -1,0 +1,24 @@
+.menu li a:hover, .menu li a:focus {
+	background-color:#E6E6E6;
+	background-image:-webkit-linear-gradient(left, #E6E6E6, #F0F0F0 10%);
+	background-image:   -moz-linear-gradient(left, #E6E6E6, #F0F0F0 10%);
+	background-image:    -ms-linear-gradient(left, #E6E6E6, #F0F0F0 10%);
+	background-image:     -o-linear-gradient(left, #E6E6E6, #F0F0F0 10%);
+	background-image:        linear-gradient(left, #E6E6E6, #F0F0F0 10%);
+}
+.menu li a:active {
+	background-color:#E4E4E4;
+	background-image:-webkit-linear-gradient(left, #E4E4E4, #F0F0F0 30%);
+	background-image:   -moz-linear-gradient(left, #E4E4E4, #F0F0F0 30%);
+	background-image:    -ms-linear-gradient(left, #E4E4E4, #F0F0F0 30%);
+	background-image:     -o-linear-gradient(left, #E4E4E4, #F0F0F0 30%);
+	background-image:        linear-gradient(left, #E4E4E4, #F0F0F0 30%);
+}
+.menu li.selected a {
+	background-color:#E0E0FF;
+	background-image:-webkit-linear-gradient(left, #E0E0FF, #F0F0F0 50%);
+	background-image:   -moz-linear-gradient(left, #E0E0FF, #F0F0F0 50%);
+	background-image:    -ms-linear-gradient(left, #E0E0FF, #F0F0F0 50%);
+	background-image:     -o-linear-gradient(left, #E0E0FF, #F0F0F0 50%);
+	background-image:        linear-gradient(left, #E0E0FF, #F0F0F0 50%);
+}
