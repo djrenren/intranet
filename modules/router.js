@@ -19,9 +19,9 @@ this.init = function (server) {
 
 	//Check if logged in
 	srv.get(/^\/(?!static\/).*$/, function (req, res, next) {
-    console.log(req.session);
+	console.log(req.session);
 		if (!user.isLogged(req)) res.render('user/login.ejs', {
-			pageTitle : "Howdy!",
+			pageTitle : "Login",
 			uname     : "Everyone"
 		});
 		else next();
@@ -29,9 +29,9 @@ this.init = function (server) {
 
 	//Login function
 	srv.post('/user/login', function (req, res) {
-		if (user.auth(new RESTObj(req))){
-      req.session.uid = 1; //Become Larry Page
-      res.redirect('back');
+		if (user.auth(new RESTObj(req))) {
+			req.session.uid = 1; //Become Larry Page
+			res.redirect('back');
 		}
 		else res.send('Username and Password do not match');
 	});
