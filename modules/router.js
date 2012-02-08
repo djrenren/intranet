@@ -18,7 +18,7 @@ this.init = function (server) {
 	srv = server;
 
 	//Check if logged in
-	srv.get(/^.*$/, function (req, res, next) {
+	srv.get(/^\/(?!css\/).*$/, function (req, res, next) {
     console.log(req.session);
 		if (!user.isLogged(req)) res.render('user/login.ejs', {
 			pageTitle : "Howdy!",

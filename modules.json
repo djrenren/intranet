@@ -3,6 +3,6 @@
 		"path": "./modules/db"
 	},
 	"User": {
-		"path": "./modules/"
+		"path": "./modules/user"
 	}
 }

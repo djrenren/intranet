@@ -15,6 +15,7 @@ srv.configure(function () {
 		secret: "keyboard cat"
 	}));
 	srv.use(srv.router);
+  srv.use(express.static(__dirname + '/public'));
 });
 srv.configure('development', function () {
 	srv.use(express.errorHandler({
@@ -29,12 +30,12 @@ srv.configure('production', function () {
 var mods = require('./modules.json');
 util.log("Initializing modules...");
 
-for (var i in mods){
-  util.log('---' + i);
-  require(mods[i].path);
+for (var i in mods) {
+	util.log('---' + i);
+	require(mods[i].path);
 }
 require('./modules/router').init(srv);
 
 
 srv.listen(3001);
-console.log("listening on port 30001");
+console.log("listening on port 3001");
