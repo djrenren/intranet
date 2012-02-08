@@ -1,8 +1,9 @@
 {
-	"Database": {
+	"db": {
 		"path": "./modules/db"
 	},
-	"User": {
-		"path": "./modules/user"
+	"user": {
+		"path": "./modules/user",
+    "rest": ["auth"]
 	}
 }
