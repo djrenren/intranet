@@ -72,6 +72,22 @@
 	margin-bottom:0px;*/
 	opacity:1;
 }
+
+.intraboxControls {
+	float:right;
+}
+.intraboxControls button {
+	background:none;
+	border:0px none transparent;
+	-webkit-box-shadow:none;
+	   -moz-box-shadow:none;
+	        box-shadow:none;
+	
+	padding:2px;
+	
+	cursor:pointer;
+}
+
 .intraboxContent {
 	margin-top:0.6em;
 	margin-bottom:0.6em;
