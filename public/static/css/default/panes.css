@@ -21,12 +21,12 @@
 	     -o-transition-duration:0.2s;
 	        transition-duration:0.2s;
 }
-@media (max-width:930px) {
+@media (max-width:945px) {
 	#mainPane {
 		left:0px;
 	}
 }
-@media (min-width:930px) {
+@media (min-width:945px) {
 	#mainPane {
 		left:280px;
 	}

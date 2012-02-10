@@ -18,7 +18,7 @@
 	overflow:auto;
 	overflow-x:hidden;
 }
-@media (max-width:930px) {
+@media (max-width:945px) {
 	#intraboxes {
 		left:-300px;
 	}
@@ -28,7 +28,7 @@
 		display:none;
 	}
 }
-@media (min-width:930px) {
+@media (min-width:945px) {
 	#intraboxes {
 		padding-left:6px;
 		padding-right:14px;

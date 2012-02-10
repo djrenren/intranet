@@ -48,7 +48,7 @@
 	     -o-transition-duration:0.2s;
 	        transition-duration:0.2s;
 }
-@media (max-width:930px) {
+@media (max-width:945px) {
 	#logo {
 		background-size:25px 28px;
 		width:72px;
@@ -108,7 +108,7 @@
 #sections a img {
 	vertical-align:bottom;
 }
-@media (max-width:930px) {
+@media (max-width:945px) {
 	#sections {
 		font-size:13px;
 		padding:0px 1px 1px;
@@ -164,7 +164,7 @@
 	        box-sizing:border-box;
 	width:100%;
 }
-@media (max-width:930px) {
+@media (max-width:945px) {
 	#searchContainer {
 		margin-left:2px;
 		margin-right:2px;
