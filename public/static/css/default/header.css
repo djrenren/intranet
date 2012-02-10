@@ -152,11 +152,16 @@
 	margin-left:280px;
 }
 #searchContainer div {
-	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
 	display:inline-block;
 	width:500px;
 }
 #searchContainer div input[type="search"] {
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
 	width:100%;
 }
 @media (max-width:930px) {

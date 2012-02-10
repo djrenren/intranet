@@ -7,6 +7,11 @@
 	font-size:10pt;
 }
 
+img {
+	border-style:none;
+	border-width:0px;
+}
+
 button, input[type="button"], input[type="submit"], input[type="reset"], input[type="radio"], input[type="checkbox"], select:not([size]), select[size="1"] {
 	-webkit-appearance:none;
 	   -moz-appearance:none;
