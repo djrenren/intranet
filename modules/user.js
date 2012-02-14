@@ -22,7 +22,7 @@ this.schemaUser = new mongoose.Schema({
  */
 this.auth = function (req) {
 	if (req.body.uname && req.body.passwd) return true;
-  return false;
+	return false;
 };
 
 /**
