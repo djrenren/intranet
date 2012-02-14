@@ -16,6 +16,7 @@ srv.configure(function () {
 	}));
 	srv.use(srv.router);
 	srv.use("/public", express.static(__dirname + '/public'));
+	srv.use(express.favicon(__dirname + '/public/favicon.ico'));
 });
 srv.configure('development', function () {
 	srv.use(express.errorHandler({

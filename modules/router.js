@@ -10,7 +10,7 @@ this.init = function (server) {
 	srv = server;
 	initializeRest();
 	//Check if logged. Excuse static and rest request
-	srv.get(/^(?!\/(rest|static)).*$/, function (req, res, next) {
+	srv.get(/^(?!\/(rest|public)\/).*$/, function (req, res, next) {
 		console.log(req.url);
 		if (!user.isLogged(req)) {
 			res.render('user/login.ejs', {
