@@ -16,7 +16,7 @@
 
 #logo {
 	color:#020202;
-	background-image:url(/static/images/themes/light/logo.png);
+	background-image:url(/public/images/themes/light/logo.png);
 	background-repeat:no-repeat;
 }
 
