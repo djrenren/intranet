@@ -1,5 +1,5 @@
 #Intranet
-All the cool kids are doing it.
+So cutting edge you will cut your mouse on it.
 
 ##Set Up:
   * git clone the intranet repository.
