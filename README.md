@@ -18,3 +18,8 @@ So cutting edge you will cut your mouse on it.
   * Function arguments should not be separated from their containing parentheses with any sort of whitespace (e.g., "while(true)", NOT "while( true )").
   * The open brace that begins a function, if, for, etc. should be on the same line as the if, for, etc. and preceded by a space.
   * The closing brace that ends a function, if, for, etc. should be on the same indentation level as the line with the corresponding open brace.
+  * Test code quality using jshint:
+
+  ```
+  $ jshint [file1] [file2] [..] --config config/jshint.json
+  ```

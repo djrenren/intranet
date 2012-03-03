@@ -2,11 +2,34 @@
  * Create Routing rules
  * @module router
  */
+/*jshint loopfunc:true */
+"use strict";
+
 var srv;
 var pl = require('./pageloader');
 var user = require('./user');
 
-this.init = function (server) {
+function initializeRest() {
+	var mods = require('../modules.json');
+	for (var m in mods)
+		if (mods[m].hasOwnProperty('rest')) {
+			var currmod = require('./' + m);
+			mods[m].rest.forEach(function (f) {
+				console.log('/rest/' + m + '/' + f);
+				srv.post('/rest/' + m + '/' + f, function (req, res) {
+					res.json(currmod[f](req));
+				});
+			});
+		}
+	srv.post(/^\/rest\/.*$/, function (req, res, next) {
+		if (req.url === '/rest/user/auth') next();
+		res.json({
+			'error': 'Not signed in'
+		});
+	});
+}
+
+exports.init = function (server) {
 	srv = server;
 	initializeRest();
 	//Check if logged. Excuse static and rest request
@@ -36,30 +59,13 @@ this.init = function (server) {
 	//Sign in test
 	srv.get('/', function (req, res) {
 		user.getUser(req.session.uid, function (err, user) {
-			pl.render('user/logintest', {
+			pl.render({
 				pageTitle: "Login Test",
-				user: user
+				mainPane: {
+					view: 'core/home',
+					title: 'Welcome Home'
+				}
 			}, req, res);
 		});
 	});
 };
-
-function initializeRest() {
-	var mods = require('../modules.json');
-	for (var m in mods)
-	if (mods[m].hasOwnProperty('rest')) {
-		var currmod = require('./' + m);
-		mods[m].rest.forEach(function (f) {
-			console.log('/rest/' + m + '/' + f);
-			srv.post('/rest/' + m + '/' + f, function (req, res) {
-				res.json(currmod[f](req));
-			});
-		});
-	}
-	srv.post(/^\/rest\/.*$/, function (req, res, next) {
-		if (req.url == '/rest/user/auth') next();
-		res.json({
-			'error': 'Not signed in'
-		});
-	});
-}

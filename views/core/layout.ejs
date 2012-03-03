@@ -9,7 +9,7 @@
 		<!-- Removes the Safari toolbars in iOS -->
 		<!-- Leaving commented out for now because of a bug -->
 		<!-- <meta name="apple-mobile-web-app-capable" content="yes" /> -->
-		
+
 		<!-- TODO: favicon line commented out because I have not created the favicon yet -->
 		<!-- <link rel="shortcut-icon" rel="image/x-icon" href="/public/images/icons/favicon.ico" /> -->
 		<link rel="apple-touch-icon-precomposed" href="/public/images/icons/apple-touch-icon-57x57-precomposed.png" />
@@ -24,7 +24,7 @@
 		<link rel="stylesheet" type="text/css" href="/public/css/default/home.css" />
 		<link rel="stylesheet" type="text/css" href="/public/css/default/calendar.css" />
 		<link rel="stylesheet" type="text/css" href="/public/css/default/news.css" />
-		
+
 		<!-- TODO: these should have "light" replaced with a reference to the theme -->
 		<link rel="stylesheet" type="text/css" href="/public/css/light/ui.css" />
 		<link rel="stylesheet" type="text/css" href="/public/css/light/menus.css" />
@@ -34,7 +34,7 @@
 		<link rel="stylesheet" type="text/css" href="/public/css/light/home.css" />
 		<link rel="stylesheet" type="text/css" href="/public/css/light/news.css" />
 		<link rel="stylesheet" type="text/css" href="/public/css/light/calendar.css" />
-		
+
 		<title><%- pageTitle %> - TJ Intranet</title>
 	</head>
 	<body>
@@ -45,14 +45,16 @@
 			<!-- /foreach -->
 		</div>
 		<div class="pane" id="mainPane">
-			<div class="paneHeader"><!-- page title --></div>
-			<div class="paneContent"><!-- page template --></div>
+			<div class="paneHeader"><%= mainPane.title %></div>
+			<div class="paneContent"><%- partial(mainPane.view, mainPane) %></div>
 		</div>
 		<!-- if applicable -->
+		<% if(subPane){ %>
 				<div class="pane" id="subPane">
-					<div class="paneHeader"><!-- page title --></div>
-					<div class="paneContent"><!-- page template --></div>
+					<div class="paneHeader"><%= subPane.title %></div>
+					<div class="paneContent"><%- partial(subPane.view, subPane) %></div>
 				</div>
+		<% } %>
 		<!-- end if -->
 	</body>
 </html>

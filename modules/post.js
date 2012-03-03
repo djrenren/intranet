@@ -3,6 +3,7 @@
  */
 var mongoose = require('mongoose');
 var db = require('./db');
+var modelPost;
 /**
  * Mongoose Schema for Post collection
  */
@@ -14,13 +15,21 @@ this.schemaPost = mongoose.Schema({
 		type: Date,
 	default:
 		Date.now
-	}
+	},
+	groups: [mongoose.Schema.ObjectId]
 });
-
 
 this.init = (function () {
 	var con = db.connect();
-	con.model("Post", this.schemaPost);
+	modelPost = con.model("Post", this.schemaPost);
+
 	con.close();
 	return true;
 }).call(this);
+
+this.getNewsByUid = function(uid, fn, lim, con){
+	con = con || db.connect();
+	con.model("Post").find({groups.members.uid: uid},[],{limit: lim || 10}, fn);
+	if(arguments.length != 4) con.close();
+}
+
