@@ -4,6 +4,7 @@
 	"version": "0.0.1",
 	"author": "John Renner and Zachary ‘Gamer_Z.’ Yaro",
 	"dependencies": {
+		"async"		: ">=0.1.18",
 		"ejs"		: ">=0.6.1",
 		"express"	: ">=2.5.4",
 		"jade"		: ">=0.20.0",
