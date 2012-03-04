@@ -7,7 +7,7 @@ var db = require('./db');
 /**
  * Mongoose Schema for Post collection
  */
-this.schemaGroup = mongoose.Schema({
+exports.schemaGroup = mongoose.Schema({
 	gid: Number,
 	name: String,
 	members: [{
@@ -17,9 +17,9 @@ this.schemaGroup = mongoose.Schema({
 });
 
 
-this.init = (function () {
+(function init() {
 	var con = db.connect();
 	con.model("Post", this.schemaPost);
 	con.close();
 	return true;
-}).call(this);
+}).call(exports);
