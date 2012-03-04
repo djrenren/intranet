@@ -15,22 +15,22 @@ exports.loginPage = function (req, res, next) {
 };
 
 exports.userLogin = function (req, res) {
-	if (user.auth(req.body.uname, req.body.passwd)) {
-		if (req.session.hasOwnProperty('loginFail')) delete req.session.loginFail;
-		req.session.uid = 1; //Become Larry Page
-	}
-	else req.session.loginFail = true;
-	res.redirect('back');
+	user.auth(req.body.uname, req.body.passwd, function(user){
+		if(user){
+			if (req.session.hasOwnProperty('loginFail')) delete req.session.loginFail;
+			req.session.user = user;
+		}
+		else req.session.loginFail = true;
+		res.redirect('back');
+	});
 };
 
 exports.home = function (req, res) {
-	user.getUser(req.session.uid, function (err, user) {
-		pl.render({
-			title: "Home",
-			mainPane: {
-				view: 'core/home',
-				title: 'Welcome ' + user.fname
-			}
-		}, req, res);
-	});
+	pl.render({
+		title: "Home",
+		mainPane: {
+			view: 'core/home',
+			title: 'Welcome ' + req.session.user.fname
+		}
+	}, req, res);
 };
