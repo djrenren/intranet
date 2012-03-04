@@ -6,7 +6,8 @@
 var user = require('./user');
 
 var DEF_RENDER = {
-	subPane: false
+	subPane: false,
+	title: "Untitled"
 };
 
 function genTheme(theme) {

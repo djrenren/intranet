@@ -60,7 +60,7 @@ exports.init = function (server) {
 	srv.get('/', function (req, res) {
 		user.getUser(req.session.uid, function (err, user) {
 			pl.render({
-				pageTitle: "Login Test",
+				title: "Home",
 				mainPane: {
 					view: 'core/home',
 					title: 'Welcome Home'
