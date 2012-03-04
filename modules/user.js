@@ -21,8 +21,8 @@ exports.schemaUser = new mongoose.Schema({
  * @param {String} uname - Desired username
  * @param {String} passwd - Password corresponding to the uname parameter
  */
-exports.auth = function (req) {
-	if (req.body.uname && req.body.passwd) return true;
+exports.auth = function (uname, passwd) {
+	if (uname && passwd) return true;
 	return false;
 };
 

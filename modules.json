@@ -4,6 +4,8 @@
 	},
 	"user": {
 		"path": "./modules/user",
-		"rest": ["auth"]
+		"rest": {
+			"auth": ["uname", "passwd"]
+		}
 	}
 }
