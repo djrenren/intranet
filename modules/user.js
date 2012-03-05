@@ -45,12 +45,10 @@ exports.isLogged = function (data) {
  * @param {Function}  cb        - Callback function(err, docs)
  */
 exports.getUser = function (params, cb) {
-	db.connect().model("User").findOne(params, cb);
+	db.mongo.model("User").findOne(params, cb);
 };
 
 (function init() {
-	var con = db.connect();
-	con.model("User", exports.schemaUser);
-	con.close();
+	db.mongo.model("User", exports.schemaUser);
 	return true;
 }).call(module);

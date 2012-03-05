@@ -1,29 +1,46 @@
 /**
  * Handles user groups
  */
-var mongoose = require('mongoose');
 var db = require('./db');
+var mongoose = require('mongoose');
+
+
 
 /**
  * Mongoose Schema for Post collection
  */
-exports.schemaGroup = mongoose.Schema({
+
+exports.GroupSchema = new mongoose.Schema({
 	admins: [{
 		type: mongoose.Schema.ObjectId,
 		ref: 'User'
 	}],
-	gid: Number,
-	name: String,
+	name: {
+		type: String,
+		index: {
+			unique: true
+		},
+		validate: /[a-z ]*/i
+	},
 	members: [{
 		type: mongoose.Schema.ObjectId,
 		ref: 'User'
 	}]
 });
 
+exports.Group = db.mongo.model("Group", exports.GroupSchema);
 
-(function init() {
-	var con = db.connect();
-	con.model("Post", this.schemaPost);
-	con.close();
-	return true;
-}).call();
+/**
+ * Create New Group
+ * @param {String}   name    - Name of Group
+ * @param {User}     creator - User creating the group
+ * @param {Function} cb      - Callback function(err)
+ */
+exports.createGroup = function (name, creator, cb) {
+	var g = new exports.Group({
+		name: name,
+		admins: [creator._id],
+		members: []
+	});
+	g.save(cb);
+};
