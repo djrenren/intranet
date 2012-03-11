@@ -38,7 +38,6 @@
 		<title><%- title %> - TJ Intranet</title>
 	</head>
 	<body>
-		<!-- header template -->
 		<%- partial('core/header') %>
 		<div id="intraboxes">
 			<!-- foreach intrabox -->
@@ -49,13 +48,11 @@
 			<div class="paneHeader"><%= mainPane.title %></div>
 			<div class="paneContent"><%- partial(mainPane.view, mainPane) %></div>
 		</div>
-		<!-- if applicable -->
-		<% if(subPane){ %>
+		<% if(subPane) { %>
 				<div class="pane" id="subPane">
 					<div class="paneHeader"><%= subPane.title %></div>
 					<div class="paneContent"><%- partial(subPane.view, subPane) %></div>
 				</div>
 		<% } %>
-		<!-- end if -->
 	</body>
 </html>
