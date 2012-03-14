@@ -14,6 +14,8 @@ exports.UserSchema = new mongoose.Schema({
 	fname: String,
 	lname: String,
 	uid: Number
+}, {
+	strict: true
 });
 
 /**

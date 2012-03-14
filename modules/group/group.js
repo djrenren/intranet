@@ -28,6 +28,8 @@ exports.GroupSchema = new mongoose.Schema({
 		type: mongoose.Schema.ObjectId,
 		ref: 'User'
 	}]
+}, {
+	strict: true
 });
 
 exports.Group = db.mongo.model("Group", exports.GroupSchema);

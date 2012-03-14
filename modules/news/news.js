@@ -22,6 +22,8 @@ exports.PostSchema = new mongoose.Schema({
 		type: mongoose.Schema.ObjectId,
 		ref: 'Group'
 	}]
+}, {
+	strict: true
 });
 exports.Post = db.mongo.model("Post", exports.PostSchema);
 
