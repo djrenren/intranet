@@ -2,7 +2,7 @@
  * Manages the home page
  * @module home
  */
-
+"use strict";
 var pl = require('../pageloader');
 exports.routes = {
 	get: [

@@ -3,7 +3,7 @@
  *@module user
  */
 "use strict";
-var db = require(__dirname+'/../db');
+var db = require(__dirname + '/../db');
 var mongoose = require('mongoose');
 
 /**
@@ -23,13 +23,14 @@ exports.UserSchema = new mongoose.Schema({
  * @param {Function} cb - Callback function(user)
  */
 var auth = exports.auth = function (uname, passwd, cb) {
-	if (!(uname && passwd)) return cb(null);
-	exports.getUser({uname: uname},function(err, user){
-		if(user)
-			return cb(user);
-		return cb(null);
-	});
-};
+		if (!(uname && passwd)) return cb(null);
+		exports.getUser({
+			uname: uname
+		}, function (err, user) {
+			if (user) return cb(user);
+			return cb(null);
+		});
+	};
 
 /**
  * Verify login state

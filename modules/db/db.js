@@ -4,8 +4,18 @@
  */
 "use strict";
 var mongoose = require('mongoose');
+
+var mongo;
+
 /**
- * Acquire new connection to mongodb database
- * @returns {Connection} Mongoose Database connection
+ * Connection to mongodb
  */
-exports.mongo = mongoose.createConnection('mongodb://web:keyboardcat@ds029837.mongolab.com:29837/intranet');
+module.exports = {
+	get mongo() {
+		return mongo;
+	}
+};
+
+module.exports.connect = function (host, db, port, user, passwd) {
+	mongo = mongoose.createConnection('mongodb://' + user + ':' + passwd + '@' + host + ':' + port + '/' + db);
+};

@@ -2,12 +2,12 @@
  * Handles news posts et al
  */
 var mongoose = require('mongoose');
-var db = require(__dirname+'/../db');
+var db = require(__dirname + '/../db');
 /**
  * Mongoose Schema for Post collection
  */
 exports.PostSchema = new mongoose.Schema({
-	author:{
+	author: {
 		type: mongoose.Schema.ObjectId,
 		ref: 'User'
 	},
@@ -16,8 +16,7 @@ exports.PostSchema = new mongoose.Schema({
 	postDate: Date,
 	updateDate: {
 		type: Date,
-		default:
-			Date.now
+		default: Date.now
 	},
 	groups: [{
 		type: mongoose.Schema.ObjectId,
@@ -26,4 +25,4 @@ exports.PostSchema = new mongoose.Schema({
 });
 exports.Post = db.mongo.model("Post", exports.PostSchema);
 
-exports.createPost = function(author,title,text,groups){};
+exports.createPost = function (author, title, text, groups) {};

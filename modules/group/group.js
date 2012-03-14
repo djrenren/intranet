@@ -1,7 +1,9 @@
 /**
  * Handles user groups
  */
-var db = require(__dirname+'/../db');
+"use strict";
+
+var db = require(__dirname + '/../db');
 var mongoose = require('mongoose');
 
 
