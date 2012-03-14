@@ -10,10 +10,10 @@ var mongoose = require('mongoose');
  * Mongoose Schema for User collection
  */
 exports.UserSchema = new mongoose.Schema({
-	uname: String,
-	fname: String,
-	lname: String,
-	uid: Number
+	uname: { type: String, required: true},
+	fname: { type: String, required: true},
+	lname: { type: String, required: true},
+	uid: { type: Number, required: true, index: { unique: true}},
 }, {
 	strict: true
 });

@@ -22,6 +22,7 @@ exports.GroupSchema = new mongoose.Schema({
 		index: {
 			unique: true
 		},
+		required: true,
 		validate: /[a-z ]*/i
 	},
 	members: [{
