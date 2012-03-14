@@ -1,0 +1,12 @@
+{
+	"port"	:	1337,
+	"rest"	:	true,
+	"web"	:	true,
+	"mongo"	:	{
+		"host"		:	"ds029837.mongolab.com",
+		"database"	:	"intranet",
+		"port"		:	29837,
+		"user"		:	"web",
+		"password"	:	"keyboardcat"
+	}
+}

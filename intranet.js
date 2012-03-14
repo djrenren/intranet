@@ -1,6 +1,8 @@
 "use strict";
-var util = require('util');
 var express = require('express');
+var core = require(__dirname + '/modules/core');
+var db = require(__dirname + '/modules/db');
+var conf = require(__dirname + '/config/server.json');
 
 var srv = express.createServer();
 srv.configure(function () {
@@ -29,15 +31,9 @@ srv.configure('production', function () {
 	srv.use(express.errorHandler());
 });
 
-var mods = require('./modules.json');
-util.log("Initializing modules...");
-
-for (var i in mods) {
-	util.log('---' + i);
-	require(mods[i].path);
-}
-require('./modules/router').init(srv);
-
-
-srv.listen(3001);
-console.log("listening on port 3001");
+db.connect(conf.mongo.host, conf.mongo.database, conf.mongo.port, conf.mongo.user, conf.mongo.password);
+core.cacheModules();
+core.routeAll(srv);
+core.initializeRest(srv);
+srv.listen(conf.port);
+console.log("listening on port " + conf.port);

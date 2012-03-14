@@ -1,0 +1,7 @@
+{
+	"name" : "user",
+	"main" : "./user",
+	"rest" : {
+		"auth" : ["uname", "passwd"]
+	}
+}

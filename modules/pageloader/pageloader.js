@@ -3,7 +3,7 @@
  * @module pageloader
  */
 "use strict";
-var user = require('./user');
+var user = require(__dirname + '/../user');
 
 var DEF_RENDER = {
 	subPane: false,
