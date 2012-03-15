@@ -13,7 +13,7 @@ exports.UserSchema = new mongoose.Schema({
 	uname: { type: String, required: true},
 	fname: { type: String, required: true},
 	lname: { type: String, required: true},
-	uid: { type: Number, required: true, index: { unique: true}},
+	uid: { type: Number, required: true, index: { unique: true}}
 }, {
 	strict: true
 });
@@ -29,7 +29,7 @@ var auth = exports.auth = function (uname, passwd, cb) {
 		exports.getUser({
 			uname: uname
 		}, function (err, user) {
-			if (user) return cb(user);
+			if (user && !err) return cb(user);
 			return cb(null);
 		});
 	};
