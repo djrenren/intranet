@@ -11,17 +11,20 @@ exports.PostSchema = new mongoose.Schema({
 		type: mongoose.Schema.ObjectId,
 		ref: 'User'
 	},
-	title: String,
-	text: String,
-	postDate: Date,
+	title: { type: String, required: true},
+	text: { type: String, required: true},
+	postDate: { type: Date, required: true},
 	updateDate: {
 		type: Date,
-		default: Date.now
+		default: Date.now,
+		required: true
 	},
 	groups: [{
 		type: mongoose.Schema.ObjectId,
 		ref: 'Group'
 	}]
+}, {
+	strict: true
 });
 exports.Post = db.mongo.model("Post", exports.PostSchema);
 

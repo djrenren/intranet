@@ -22,12 +22,15 @@ exports.GroupSchema = new mongoose.Schema({
 		index: {
 			unique: true
 		},
+		required: true,
 		validate: /[a-z ]*/i
 	},
 	members: [{
 		type: mongoose.Schema.ObjectId,
 		ref: 'User'
 	}]
+}, {
+	strict: true
 });
 
 exports.Group = db.mongo.model("Group", exports.GroupSchema);

@@ -17,8 +17,5 @@ exports.render = function (obj, req, res) {
 	var rendobj = DEF_RENDER;
 	for (var i in obj)
 		rendobj[i] = obj[i];
-	user.getUser(req.session.uid, function (err, user) {
-		rendobj.themes = genTheme(user);
-	});
 	res.render('core/layout', rendobj);
 };
