@@ -1,0 +1,31 @@
+<form method="post">
+	<table>
+		<tr>
+			<td>Title:</td>
+			<td><input type="text" name="title" /></td>
+		</tr>
+		<tr>
+			<td>Start date:</td>
+			<td>[date picker, defaulted to current date] [time picker, defaulted to current time]</td>
+		</tr>
+		<tr>
+			<td>Expiration date:</td>
+			<td>[date picker, unknown default] [time picker, defaulted to midnight]</td>
+		</tr>
+		<tr>
+			<td>Groups</td>
+			<td>
+				Not sure how this should look, but it should have the "Public" group selected by default (unless we want publicness to be a boolean, which is just as valid).
+				There also needs to be some way to indicate that this is for a class or a club and also to select topics (see my prefs mockup...topics could be sort of like tags).
+			</td>
+		</tr>
+	</table>
+	[toolbar will go here]
+	<textarea placeholder="Compose your news posting here"></textarea>
+	<p>News posting rules will be listed here</p>
+	<!-- if user is an admin -->
+		<button type="submit">Post</button>
+	<!-- else >
+		<button type="submit">Submit for approval</button>
+	< endif -->
+</form>
