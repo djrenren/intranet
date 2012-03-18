@@ -15,8 +15,7 @@
 	     -o-transition-duration:0.2s;
 	        transition-duration:0.2s;
 }
-
-.loginField {
+#loginPane form input[type="text"], #loginPane form input[type="password"] {
 	width:240px;
 }
 
@@ -55,14 +54,14 @@
 		width:100%;
 		padding:0px 4px;
 	}
-	.loginField {
+	#loginPane form input[type="text"], #loginPane form input[type="password"] {
 		width:96%;
 	}
 	#logo {
-		padding-top:2px;
-		padding-left:32px;
+		padding-left:37px;
+		padding-top:0px;
 		font-size:26px;
-		background-size:30px 33px;
-		height:33px;
+		background-size:34px 37px;
+		height:38px;
 	}
 }

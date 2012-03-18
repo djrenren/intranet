@@ -24,10 +24,15 @@
 	#loginPane {
 		background-color:#F0F0F0;
 		background-color:rgba(240,240,240,0.8);
-		background-image:-webkit-linear-gradient(rgba(255,255,255,0.8), rgba(240,240,240,0.8));
+		background-image:-webkit-linear-gradient(white, #F0F0F0);
+		background-image:   -moz-linear-gradient(white, #F0F0F0);
+		background-image:    -ms-linear-gradient(white, #F0F0F0);
+		background-image:     -o-linear-gradient(white, #F0F0F0);
+		background-image:        linear-gradient(white, #F0F0F0);
+/*		background-image:-webkit-linear-gradient(rgba(255,255,255,0.8), rgba(240,240,240,0.8));
 		background-image:   -moz-linear-gradient(rgba(255,255,255,0.8), rgba(240,240,240,0.8));
 		background-image:    -ms-linear-gradient(rgba(255,255,255,0.8), rgba(240,240,240,0.8));
 		background-image:     -o-linear-gradient(rgba(255,255,255,0.8), rgba(240,240,240,0.8));
-		background-image:        linear-gradient(rgba(255,255,255,0.8), rgba(240,240,240,0.8));
+		background-image:        linear-gradient(rgba(255,255,255,0.8), rgba(240,240,240,0.8));*/
 	}
 }
