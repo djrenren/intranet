@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-#loginPane {
+#mainPane {
 	position:absolute;
 	left:0px;
 	top:0px;
@@ -15,7 +15,7 @@
 	     -o-transition-duration:0.2s;
 	        transition-duration:0.2s;
 }
-#loginPane form input[type="text"], #loginPane form input[type="password"] {
+#mainPane form input[type="text"], #loginPane form input[type="password"] {
 	width:240px;
 }
 
@@ -54,7 +54,7 @@
 		width:100%;
 		padding:0px 4px;
 	}
-	#loginPane form input[type="text"], #loginPane form input[type="password"] {
+	#mainPane form input[type="text"], #mainPane form input[type="password"] {
 		width:96%;
 	}
 	#logo {
