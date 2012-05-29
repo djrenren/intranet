@@ -1,0 +1,35 @@
+.toolbar {
+	display:inline-block;
+	padding:0px;
+	
+	-webkit-border-radius:3px;
+	   -moz-border-radius:3px;
+	        border-radius:3px;
+}
+
+.toolbar span {
+	display:inline-block;
+	padding:4px;
+}
+
+.toolbar button {
+	-webkit-border-radius:0px;
+	   -moz-border-radius:0px;
+	        border-radius:0px;
+}
+.toolbar button:first-of-type {
+	 -webkit-border-top-left-radius:3px;
+	-webkit-border-top-right-radius:3px;
+	     -moz-border-radius-topleft:3px;
+	    -moz-border-radius-topright:3px;
+	         border-top-left-radius:3px;
+	        border-top-right-radius:3px;
+}
+.toolbar button:last-of-type {
+	 -webkit-border-bottom-left-radius:3px;
+	-webkit-border-bottom-right-radius:3px;
+	     -moz-border-radius-bottomleft:3px;
+	    -moz-border-radius-bottomright:3px;
+	         border-bottom-left-radius:3px;
+	        border-bottom-right-radius:3px;
+}
