@@ -22,3 +22,13 @@
 	background-image:     -o-linear-gradient(left, #E0E0FF, #F0F0F0 50%);
 	background-image:        linear-gradient(left, #E0E0FF, #F0F0F0 50%);
 }
+
+ul.grid li {
+	background-color:#E4E4E4;
+}
+ul.grid li > a {
+	/*color:#5A5AA0;*/
+}
+ul.grid li > a:hover {
+	background-color:#F6F6F6;
+}
