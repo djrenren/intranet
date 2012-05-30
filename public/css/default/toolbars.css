@@ -16,6 +16,7 @@
 	-webkit-border-radius:0px;
 	   -moz-border-radius:0px;
 	        border-radius:0px;
+	margin:0px;
 }
 .toolbar button:first-of-type {
 	   -webkit-border-top-left-radius:3px;
