@@ -23,8 +23,6 @@ button, input[type="button"], input[type="submit"], input[type="reset"], input[t
 	background-image:    -ms-linear-gradient(#303030, #202020);
 	background-image:     -o-linear-gradient(#303030, #202020);
 	background-image:        linear-gradient(#303030, #202020);
-	border-style:solid;
-	border-width:1px;
 	border-color:#131313;
 	border-top-color:#343434;
 	
@@ -41,15 +39,6 @@ input[type="radio"]:checked {
 	background-image:url(/images/themes/dark/radiodot.png),      -o-linear-gradient(#303030, #202020);
 	background-image:url(/images/themes/dark/radiodot.png),         linear-gradient(#303030, #202020);
 }
-input[type="checkbox"] {
-	-webkit-border-radius:3px;
-	-moz-border-radius:3px;
-	border-radius:3px;
-	width:15px;
-	height:15px;
-	position:relative;
-	top:4px;
-}
 input[type="checkbox"]:checked {
 	background-image:url(/images/themes/dark/check.png), -webkit-linear-gradient(#303030, #202020);
 	background-image:url(/images/themes/dark/check.png),    -moz-linear-gradient(#303030, #202020);
@@ -60,7 +49,7 @@ input[type="checkbox"]:checked {
 	background-position:1px -1px;
 }
 
-button:hover:not(:disabled), input[type=button]:hover:not(:disabled), input[type=submit]:hover:not(:disabled), input[type=reset]:hover:not(:disabled), input[type=radio]:hover:not(:disabled), input[type=checkbox]:hover:not(:disabled), select:not([size]):hover:not(:disabled), select[size="1"]:hover:not(:disabled), button:focus:not(:disabled), input[type=button]:focus:not(:disabled), input[type=submit]:focus:not(:disabled), input[type=reset]:focus:not(:disabled), input[type=radio]:focus:not(:disabled), input[type=checkbox]:focus:not(:disabled), select:not([size]):focus:not(:disabled), select[size="1"]:focus:not(:disabled) {
+button:hover:enabled, input[type=button]:hover:enabled, input[type=submit]:hover:enabled, input[type=reset]:hover:enabled, input[type=radio]:hover:enabled, input[type=checkbox]:hover:enabled, select:not([size]):hover:enabled, select[size="1"]:hover:enabled, button:focus:enabled, input[type=button]:focus:enabled, input[type=submit]:focus:enabled, input[type=reset]:focus:enabled, input[type=radio]:focus:enabled, input[type=checkbox]:focus:enabled, select:not([size]):focus:enabled, select[size="1"]:focus:enabled {
 	background-color:#282828;
 	/*background-image:-webkit-linear-gradient(#E9E9F0, #D8D8F0);
 	border-color:#CACAFF;*/
@@ -70,14 +59,14 @@ button:hover:not(:disabled), input[type=button]:hover:not(:disabled), input[type
 	background-image:     -o-linear-gradient(#353535, #282828);
 	background-image:        linear-gradient(#353535, #282828);
 }
-input[type="radio"]:checked:hover:not(:disabled), input[type="radio"]:checked:focus:not(:disabled) {
+input[type="radio"]:checked:hover:enabled, input[type="radio"]:checked:focus:enabled {
 	background-image:url(/images/themes/dark/radiodot.png), -webkit-linear-gradient(#353535, #282828);
 	background-image:url(/images/themes/dark/radiodot.png),    -moz-linear-gradient(#353535, #282828);
 	background-image:url(/images/themes/dark/radiodot.png),     -ms-linear-gradient(#353535, #282828);
 	background-image:url(/images/themes/dark/radiodot.png),      -o-linear-gradient(#353535, #282828);
 	background-image:url(/images/themes/dark/radiodot.png),         linear-gradient(#353535, #282828);
 }
-input[type="checkbox"]:checked:hover:not(:disabled), input[type="checkbox"]:checked:focus:not(:disabled) {
+input[type="checkbox"]:checked:hover:enabled, input[type="checkbox"]:checked:focus:enabled {
 	background-image:url(/images/themes/dark/check.png), -webkit-linear-gradient(#353535, #282828);
 	background-image:url(/images/themes/dark/check.png),    -moz-linear-gradient(#353535, #282828);
 	background-image:url(/images/themes/dark/check.png),     -ms-linear-gradient(#353535, #282828);
@@ -85,7 +74,9 @@ input[type="checkbox"]:checked:hover:not(:disabled), input[type="checkbox"]:chec
 	background-image:url(/images/themes/dark/check.png),         linear-gradient(#353535, #282828);
 }
 
-button:active:not(:disabled), input[type=button]:active:not(:disabled), input[type=submit]:active:not(:disabled), input[type=reset]:active:not(:disabled), input[type=radio]:active:not(:disabled), input[type=checkbox]:active:not(:disabled), select:not([size]):active:not(:disabled), select[size="1"]:active:not(:disabled) {
+button:active:enabled, input[type=button]:active:enabled, input[type=submit]:active:enabled, input[type=reset]:active:enabled,
+button.active:enabled, input[type=button].active:enabled, input[type=submit].active:enabled, input[type=reset].active:enabled,
+input[type=radio]:active:enabled, input[type=checkbox]:active:enabled, select:not([size]):active:enabled, select[size="1"]:active:enabled {
 	background-color:#1C1C1C;
 	background-image:-webkit-linear-gradient(#181818, #202020);
 	background-image:   -moz-linear-gradient(#181818, #202020);
@@ -98,14 +89,14 @@ button:active:not(:disabled), input[type=button]:active:not(:disabled), input[ty
 	border-color:rgba(0,0,0,0.7);
 	border-bottom-color:rgba(0,0,0,0.3);
 }
-input[type="radio"]:checked:active:not(:disabled) {
+input[type="radio"]:checked:active:enabled {
 	background-image:url(/images/themes/dark/radiodot.png), -webkit-linear-gradient(#181818, #202020);
 	background-image:url(/images/themes/dark/radiodot.png),    -moz-linear-gradient(#181818, #202020);
 	background-image:url(/images/themes/dark/radiodot.png),     -ms-linear-gradient(#181818, #202020);
 	background-image:url(/images/themes/dark/radiodot.png),      -o-linear-gradient(#181818, #202020);
 	background-image:url(/images/themes/dark/radiodot.png),         linear-gradient(#181818, #202020);
 }
-input[type="checkbox"]:checked:active:not(:disabled) {
+input[type="checkbox"]:checked:active:enabled {
 	background-image:url(/images/themes/dark/check.png), -webkit-linear-gradient(#181818, #202020);
 	background-image:url(/images/themes/dark/check.png),    -moz-linear-gradient(#181818, #202020);
 	background-image:url(/images/themes/dark/check.png),     -ms-linear-gradient(#181818, #202020);
@@ -115,36 +106,21 @@ input[type="checkbox"]:checked:active:not(:disabled) {
 
 
 input:not([type]), input[type=text], input[type=email], input[type=search], input[type=password], textarea, select[size]:not([size="1"]) {
-	-webkit-appearance:none;
-	   -moz-appearance:none;
-	     -o-appearance:none;
-	        appearance:none;
 	/*background-color:#202020;
 	background-color:rgba(200,200,200,0.07);*/
-	background-color:transparent;
 	border-color:#EAEAEA;
-	border-style:solid;
-	border-width:0px;
-	border-bottom-width:1px;
 	
 	color:#EAEAEA;
-}
-textarea, select[size]:not([size="1"]) {
-	border-width:1px;
 }
 *:focus {
 	/*outline-color:rgba(0,128,256,0.5);
 	outline-style:solid;
 	outline-offset:-1px;*/
-	outline-width:0px;
 	-webkit-box-shadow:0px 0px 1px 1px rgba(0,128,255,0.5);
 	   -moz-box-shadow:0px 0px 1px 1px rgba(0,128,255,0.5);
 	        box-shadow:0px 0px 1px 1px rgba(0,128,255,0.5);
 }
 input:not([type]):focus, input[type="text"]:focus, input[type="email"]:focus, input[type="search"]:focus, input[type="password"]:focus, textarea:focus, select[size]:not([size="1"]):focus {
-	-webkit-box-shadow:none;
-	   -moz-box-shadow:none;
-	        box-shadow:none;
 	border-color:#6068FF;
 	/*border-style:solid;
 	border-width:1px;*/

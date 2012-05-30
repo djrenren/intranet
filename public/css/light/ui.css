@@ -23,8 +23,6 @@ button, input[type="button"], input[type="submit"], input[type="reset"], input[t
 	background-image:    -ms-linear-gradient(#E8E8E8, #D8D8D8);
 	background-image:     -o-linear-gradient(#E8E8E8, #D8D8D8);
 	background-image:        linear-gradient(#E8E8E8, #D8D8D8);
-	border-style:solid;
-	border-width:1px;
 	border-color:#D3D3D3;
 	border-bottom-color:#B0B0B0;
 	
@@ -43,15 +41,6 @@ input[type="radio"]:checked {
 	background-image:url(/images/themes/light/radiodot.png),     -ms-linear-gradient(#E8E8E8, #D8D8D8);
 	background-image:url(/images/themes/light/radiodot.png),      -o-linear-gradient(#E8E8E8, #D8D8D8);
 	background-image:url(/images/themes/light/radiodot.png),         linear-gradient(#E8E8E8, #D8D8D8);
-}
-input[type="checkbox"] {
-	-webkit-border-radius:3px;
-	-moz-border-radius:3px;
-	border-radius:3px;
-	width:15px;
-	height:15px;
-	position:relative;
-	top:4px;
 }
 input[type="checkbox"]:checked {
 	background-image:url(/images/themes/light/check.png), -webkit-linear-gradient(#E8E8E8, #D8D8D8);
@@ -121,34 +110,19 @@ input[type="checkbox"]:checked:active:enabled {
 
 
 input:not([type]), input[type=text], input[type=email], input[type=search], input[type=password], textarea, select[size]:not([size="1"]) {
-	-webkit-appearance:none;
-	   -moz-appearance:none;
-	     -o-appearance:none;
-	        appearance:none;
 	/*background-color:#FAFAFC;
 	background-color:rgba(255,255,255,0.5);*/
-	background-color:transparent;
 	border-color:#A0A0A0;
-	border-style:solid;
-	border-width:0px;
-	border-bottom-width:1px;
-}
-textarea, select[size]:not([size="1"]) {
-	border-width:1px;
 }
 *:focus {
 	/*outline-color:rgba(0,128,256,0.5);
 	outline-style:solid;
 	outline-offset:-1px;*/
-	outline-width:0px;
 	-webkit-box-shadow:0px 0px 1px 1px rgba(0,128,255,0.5);
 	   -moz-box-shadow:0px 0px 1px 1px rgba(0,128,255,0.5);
 	        box-shadow:0px 0px 1px 1px rgba(0,128,255,0.5);
 }
 input:not([type]):focus, input[type="text"]:focus, input[type="email"]:focus, input[type="search"]:focus, input[type="password"]:focus, textarea:focus, select[size]:not([size="1"]):focus {
-	-webkit-box-shadow:none;
-	   -moz-box-shadow:none;
-	        box-shadow:none;
 	border-color:#1020FF;
 	/*border-style:solid;
 	border-width:1px;*/

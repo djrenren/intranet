@@ -19,6 +19,9 @@ button, input[type="button"], input[type="submit"], input[type="reset"], input[t
 	        appearance:none;
 	
 	font-size:13px;
+	
+	border-style:solid;
+	border-width:1px;
 }
 select:not([size]), select[size="1"] {
 	-webkit-appearance:menulist-button;
@@ -36,11 +39,20 @@ select[size]:not([size="1"]) {
 	   -moz-border-radius:1px;
 	        border-radius:1px;
 }
-button, input[type=button], input[type=submit], input[type=reset] {
+button, input[type="button"], input[type="submit"], input[type="reset"] {
 	-webkit-border-radius:3px;
 	   -moz-border-radius:3px;
 	        border-radius:3px;
 	padding:4px 10px;
+}
+input[type="checkbox"] {
+	-webkit-border-radius:3px;
+	   -moz-border-radius:3px;
+	        border-radius:3px;
+	width:15px;
+	height:15px;
+	position:relative;
+	top:4px;
 }
 input[type="radio"] {
 	-webkit-border-radius:10px;
@@ -53,6 +65,11 @@ input[type="radio"] {
 }
 
 input:not([type]), input[type=text], input[type=email], input[type=search], input[type=password], textarea, select[size]:not([size="1"]) {
+	-webkit-appearance:none;
+	   -moz-appearance:none;
+	     -o-appearance:none;
+	        appearance:none;
+	background-color:transparent;
 	padding:4px;
 }
 input:not([type]), input[type=text], input[type=email], input[type=search], input[type=password] {
@@ -62,7 +79,21 @@ input:not([type]), input[type=text], input[type=email], input[type=search], inpu
 	   -moz-border-bottom-right-radius:1px 10px;
 	         border-bottom-left-radius:1px 10px;
 	        border-bottom-right-radius:1px 10px;
+	border-style:solid;
+	border-width:0px;
+	border-bottom-width:1px;
+}
+textarea, select[size]:not([size="1"]) {
+	border-width:1px;
+}
+input:not([type]):focus, input[type="text"]:focus, input[type="email"]:focus, input[type="search"]:focus, input[type="password"]:focus, textarea:focus, select[size]:not([size="1"]):focus {
+	-webkit-box-shadow:none;
+	   -moz-box-shadow:none;
+	        box-shadow:none;
 }
 input:disabled, button:disabled, textarea:disabled, select:disabled {
 	opacity:0.6;
+}
+*:focus {
+	outline-width:0px;
 }
