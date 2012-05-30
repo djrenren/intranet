@@ -63,7 +63,7 @@ input[type="checkbox"]:checked {
 	background-position:1px 1px;
 }
 
-button:hover:not(:disabled), input[type=button]:hover:not(:disabled), input[type=submit]:hover:not(:disabled), input[type=reset]:hover:not(:disabled), input[type=radio]:hover:not(:disabled), input[type=checkbox]:hover:not(:disabled), select:not([size]):hover:not(:disabled), select[size="1"]:hover:not(:disabled), button:focus:not(:disabled), input[type=button]:focus:not(:disabled), input[type=submit]:focus:not(:disabled), input[type=reset]:focus:not(:disabled), input[type=radio]:focus:not(:disabled), input[type=checkbox]:focus:not(:disabled), select:not([size]):focus:not(:disabled), select[size="1"]:focus:not(:disabled) {
+button:hover:enabled, input[type=button]:hover:enabled, input[type=submit]:hover:enabled, input[type=reset]:hover:enabled, input[type=radio]:hover:enabled, input[type=checkbox]:hover:enabled, select:not([size]):hover:enabled, select[size="1"]:hover:enabled, button:focus:enabled, input[type=button]:focus:enabled, input[type=submit]:focus:enabled, input[type=reset]:focus:enabled, input[type=radio]:focus:enabled, input[type=checkbox]:focus:enabled, select:not([size]):focus:enabled, select[size="1"]:focus:enabled {
 	background-color:#E8E8E8;
 	/*background-image:-webkit-linear-gradient(#E9E9F0, #D8D8F0);
 	border-color:#CACAFF;*/
@@ -73,14 +73,14 @@ button:hover:not(:disabled), input[type=button]:hover:not(:disabled), input[type
 	background-image:     -o-linear-gradient(#F0F0F0, #E0E0E0);
 	background-image:        linear-gradient(#F0F0F0, #E0E0E0);
 }
-input[type="radio"]:checked:hover:not(:disabled), input[type="radio"]:checked:focus:not(:disabled) {
+input[type="radio"]:checked:hover:enabled, input[type="radio"]:checked:focus:enabled {
 	background-image:url(/images/themes/light/radiodot.png), -webkit-linear-gradient(#F0F0F0, #E0E0E0);
 	background-image:url(/images/themes/light/radiodot.png),    -moz-linear-gradient(#F0F0F0, #E0E0E0);
 	background-image:url(/images/themes/light/radiodot.png),     -ms-linear-gradient(#F0F0F0, #E0E0E0);
 	background-image:url(/images/themes/light/radiodot.png),      -o-linear-gradient(#F0F0F0, #E0E0E0);
 	background-image:url(/images/themes/light/radiodot.png),         linear-gradient(#F0F0F0, #E0E0E0);
 }
-input[type="checkbox"]:checked:hover:not(:disabled), input[type="checkbox"]:checked:focus:not(:disabled) {
+input[type="checkbox"]:checked:hover:enabled, input[type="checkbox"]:checked:focus:enabled {
 	background-image:url(/images/themes/light/check.png), -webkit-linear-gradient(#F0F0F0, #E0E0E0);
 	background-image:url(/images/themes/light/check.png),    -moz-linear-gradient(#F0F0F0, #E0E0E0);
 	background-image:url(/images/themes/light/check.png),     -ms-linear-gradient(#F0F0F0, #E0E0E0);
@@ -88,7 +88,9 @@ input[type="checkbox"]:checked:hover:not(:disabled), input[type="checkbox"]:chec
 	background-image:url(/images/themes/light/check.png),         linear-gradient(#F0F0F0, #E0E0E0);
 }
 
-button:active:not(:disabled), input[type=button]:active:not(:disabled), input[type=submit]:active:not(:disabled), input[type=reset]:active:not(:disabled), input[type=radio]:active:not(:disabled), input[type=checkbox]:active:not(:disabled), select:not([size]):active:not(:disabled), select[size="1"]:active:not(:disabled) {
+button:active:enabled, input[type=button]:active:enabled, input[type=submit]:active:enabled, input[type=reset]:active:enabled,
+button.active:enabled, input[type=button].active:enabled, input[type=submit].active:enabled, input[type=reset].active:enabled,
+input[type=radio]:active:enabled, input[type=checkbox]:active:enabled, select:not([size]):active:enabled, select[size="1"]:active:enabled {
 	background-color:#DCDCDC;
 	/*background-image:-webkit-linear-gradient(#D0D0F0, #E0E0F0);*/
 	background-image:-webkit-linear-gradient(#D6D6D6, #E0E0E0);
@@ -102,14 +104,14 @@ button:active:not(:disabled), input[type=button]:active:not(:disabled), input[ty
 	border-color:rgba(0,0,0,0.2);
 	border-bottom-color:rgba(0,0,0,0.05);
 }
-input[type="radio"]:checked:active:not(:disabled) {
+input[type="radio"]:checked:active:enabled {
 	background-image:url(/images/themes/light/radiodot.png), -webkit-linear-gradient(#D6D6D6, #E0E0E0);
 	background-image:url(/images/themes/light/radiodot.png),    -moz-linear-gradient(#D6D6D6, #E0E0E0);
 	background-image:url(/images/themes/light/radiodot.png),     -ms-linear-gradient(#D6D6D6, #E0E0E0);
 	background-image:url(/images/themes/light/radiodot.png),      -o-linear-gradient(#D6D6D6, #E0E0E0);
 	background-image:url(/images/themes/light/radiodot.png),         linear-gradient(#D6D6D6, #E0E0E0);
 }
-input[type="checkbox"]:checked:active:not(:disabled) {
+input[type="checkbox"]:checked:active:enabled {
 	background-image:url(/images/themes/light/check.png), -webkit-linear-gradient(#D6D6D6, #E0E0E0);
 	background-image:url(/images/themes/light/check.png),    -moz-linear-gradient(#D6D6D6, #E0E0E0);
 	background-image:url(/images/themes/light/check.png),     -ms-linear-gradient(#D6D6D6, #E0E0E0);
